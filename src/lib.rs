@@ -54,6 +54,10 @@ impl Screenshot {
 	#[inline]
 	pub fn pixel_width(&self) -> usize { self.pixel_width }
 
+    /// Bitmap as vector.
+    #[inline]
+    pub fn get_data(&self) -> Vec<u8> { self.data.clone() }
+
 	/// Raw bitmap.
 	#[inline]
 	pub unsafe fn raw_data(&self) -> *const u8 {
